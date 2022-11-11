@@ -1,4 +1,3 @@
-
 # AnimeGANv3-Python
 
 A command-line tool that transforms photos into an anime look using ONNX Runtime trained models of [AnimeGANv3](https://github.com/TachibanaYoshino/AnimeGANv3).  
@@ -33,7 +32,7 @@ PIPENV_VENV_IN_PROJECT="true" pipenv sync
 pipenv run python AnimeGANv3-Python.py C:/path/to/input_images C:/path/to/output_images --onnx-model-type H40
 ```
 
-```
+```text
 usage: AnimeGANv3-Python.py [-h] [--onnx-model-type {H40,H50,H64}] InputDirPath OutputDirPath
 
 positional arguments:
@@ -44,6 +43,10 @@ options:
   -h, --help            show this help message and exit
   --onnx-model-type {H40,H50,H64}
                         onnx model type (H40, H50, H64)
+```
+
+```bash
+docker run -v $pwd/inputs:/inputs -v $pwd/outputs:/outputs guojiank/animeganv3
 ```
 
 ## Examples
